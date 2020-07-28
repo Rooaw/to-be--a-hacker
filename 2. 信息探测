@@ -7,14 +7,13 @@
     
     如果目标用了 CDN
         确认是否是真实 ip
-            多地区 ping，看 ip 是否一致，有在线网站可以ping
+            17ce.com 多地区 ping，看 ip 是否一致，
             浏览器直接访问 ip，看和域名访问是否一致
         绕过 CDN 查真实 ip
-            对方内部邮箱
+            对方内部邮箱，ping 该邮箱域名获取真实 ip
             分站
-            国外访问
-            域名解析记录
-                前提目标以前没音用 CDN
+            国外在线代理访问，App Synthetic Monitor
+            域名解析记录，前提目标以前没用 CDN
             在线网站 CloudFlare
             
     查子域名
@@ -22,9 +21,16 @@
         工具
   
 2. 扫描目标获取相关信息
-    目录、文件
+    目录
+        DirBuster、御剑、burp suite
     漏洞
+        AWVS、burp suite
     指纹识别
-    开放端口
     后台
+    开放端口、主机探测等
+        nmap
+            -sS 半开式扫描，比较隐蔽
+            --open 只显示打开了的端口
+            -Pn 不执行 ping 命令直接扫描
+            详细：https://blog.csdn.net/qq_41880069/article/details/82792896
     
