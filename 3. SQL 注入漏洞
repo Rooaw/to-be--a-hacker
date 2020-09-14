@@ -66,3 +66,14 @@ SQL 注入：在网页上输入：1，后端执行的代码是 select xxx,xxx fr
 		 		TABLE_SCHEMA、TABLE_NAME、COLUMN_NAME
                 
         2. MySQL 5.5.53 前的版本没有配置 secure_file_prev，可以直接通过 SQL 语句读写文件，> 5.5.53 版本需要设置 secure_file_prev 为空，为 null 时不可读写。
+	
+6. 判断数据库类型
+    1. id = x and user>0
+    	ACCESS->错误里有"microsoft jet database"
+	MSSQL->错误里有"SQL server"
+    2. 
+    	
+	
+	
+7. base 64 注入
+    	ACCESS->错误里有"microsoft jet database"
